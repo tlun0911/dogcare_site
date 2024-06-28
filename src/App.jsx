@@ -67,19 +67,19 @@ function App() {
 
   return (
     <div className="font-poppins bg-zinc-400 text-sky-800">
-      <section id="landing" className="">
+      <section id="landing" className="max-h-screen">
         <Landing />
       </section>
-      <section id="about" className="">
+      <section id="about" className="max-h-screen">
         <AboutUs />
       </section>
-      <section id="testimonials" className="">
+      <section id="testimonials" className="max-h-screen">
         <Testomonials />
       </section>
-      <section id="rates" className="">
+      <section id="rates" className="max-h-screen">
         <Rates />
       </section>
-      <section id="contact" className="">
+      <section id="contact" className="max-h-screen">
         <Contact />
       </section>
     </div>

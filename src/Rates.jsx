@@ -17,12 +17,30 @@ const Rates = () => {
       scale: 1, // Target scale. Assuming the image starts larger, e.g., style={{transform: "scale(1.5)"}}
       ease: "none", // Use a linear ease for smooth scaling
     });
+
+    gsap.to("#text4-container", {
+      scrollTrigger: {
+        trigger: "#text4-container",
+        start: "top bottom", // Start the animation when the top of the trigger hits the bottom of the viewport
+        end: "top center", // End the animation when the top of the trigger hits the top of the viewport
+        scrub: true, // Smooth scrubbing, consider a small number for slight delay (e.g., 0.5)
+      },
+      scale: 1, // Target scale. Assuming the image starts larger, e.g., style={{transform: "scale(1.5)"}}
+      ease: "none", // Use a linear ease for smooth scaling
+     
+      });
+
   }, []);
 
   return (
     <div className="flex flex-row max-h-screen bg-cyan-400">
-      <div className="flex flex-col justify-center items-center mx-auto">
-        Rates
+      <div id="text4-container" className="flex flex-col justify-center items-center mx-auto scale-0">
+        <h2 className="text-3xl font-bold mb-4">Our Services:</h2>
+        <p className="text-lg py-4 px-8">
+          Dog Boarding - $30 Per Night (per dog) <br />
+          <br />
+          House/Pet Sitting - $30 Per Night (per dog)
+        </p>
       </div>
       <div id="image4-container" className="overflow-hidden w-1/2">
         <img

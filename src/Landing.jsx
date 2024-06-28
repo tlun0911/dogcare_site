@@ -43,7 +43,7 @@ const Landing = () => {
 
   return (
     <div className="flex flex-row max-h-screen">
-      <div className="overflow-hidden w-1/2">
+      <div className="overflow-hidden  w-1/2">
         <img
           src={landing_img}
           alt="landing"

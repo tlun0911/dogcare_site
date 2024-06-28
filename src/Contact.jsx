@@ -55,7 +55,6 @@ const Contact = () => {
       },
       scale: 1, // Target scale. Assuming the image starts larger, e.g., style={{transform: "scale(1.5)"}}
       ease: "none", // Use a linear ease for smooth scaling
-      toggleActions: "play reverse none none",
 
     });
 
@@ -68,7 +67,6 @@ const Contact = () => {
       },
       scale: 1, // Target scale. Assuming the image starts larger, e.g., style={{transform: "scale(1.5)"}}
       ease: "none", // Use a linear ease for smooth scaling
-      toggleActions: "play reverse none none",
     });
   }, []);
 
@@ -94,7 +92,7 @@ const Contact = () => {
           className="flex flex-col mx-auto w-2/3 items-center justify-center"
           onSubmit={handleSubmit}
         >
-          <label htmlFor="user_name" className="mb-2 text-xl">
+          <label htmlFor="user_name" className="mb-2 font-bold text-xl">
             Name
           </label>
           <input
@@ -106,7 +104,7 @@ const Contact = () => {
             onChange={handleChange}
           />
 
-          <label htmlFor="user_email" className="text-start  text-xl mb-2">
+          <label htmlFor="user_email" className="text-start font-bold text-xl mb-2">
             Email
           </label>
           <input
@@ -118,7 +116,7 @@ const Contact = () => {
             onChange={handleChange}
           />
 
-          <label htmlFor="message" className="text-start text-xl mb-2">
+          <label htmlFor="message" className="text-start text-xl font-bold mb-2">
             Message
           </label>
           <textarea

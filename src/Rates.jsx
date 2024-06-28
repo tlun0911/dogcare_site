@@ -17,7 +17,6 @@ const Rates = () => {
       },
       scale: 1, // Target scale. Assuming the image starts larger, e.g., style={{transform: "scale(1.5)"}}
       ease: "none", // Use a linear ease for smooth scaling
-      toggleActions: "play reverse none none",
     });
 
     gsap.to("#text4-container", {
@@ -29,7 +28,6 @@ const Rates = () => {
       },
       scale: 1, // Target scale. Assuming the image starts larger, e.g., style={{transform: "scale(1.5)"}}
       ease: "none", // Use a linear ease for smooth scaling
-      toggleActions: "play reverse none none",
     });
   }, []);
 

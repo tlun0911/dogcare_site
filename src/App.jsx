@@ -3,9 +3,12 @@ import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Landing from "./Landing";
 import AboutUs from "./AboutUs";
-import Testomonials from "./Testimonials";
+import Testimonials from "./Testimonials";
 import Rates from "./Rates";
 import Contact from "./Contact";
+import Footer from "./Footer";
+import Testimonials2 from "./Testimonials2";
+import Testimonials3 from "./Testimonials3";
 
 function App() {
   useEffect(() => {
@@ -37,6 +40,24 @@ function App() {
       y: -100, // Adjust the movement speed and direction
       scrollTrigger: {
         trigger: "#testimonials",
+        start: "top top", // When the top of the trigger hits the center of the viewport
+        end: "bottom top", // When the bottom of the trigger hits the top of the viewport
+        scrub: true, // Smooth scrubbing, true for 0.1 seconds of lag
+      },
+    });
+    gsap.to("#testimonials2", {
+      y: -100, // Adjust the movement speed and direction
+      scrollTrigger: {
+        trigger: "#testimonials2",
+        start: "top top", // When the top of the trigger hits the center of the viewport
+        end: "bottom top", // When the bottom of the trigger hits the top of the viewport
+        scrub: true, // Smooth scrubbing, true for 0.1 seconds of lag
+      },
+    });
+    gsap.to("#testimonials3", {
+      y: -100, // Adjust the movement speed and direction
+      scrollTrigger: {
+        trigger: "#testimonials3",
         start: "top top", // When the top of the trigger hits the center of the viewport
         end: "bottom top", // When the bottom of the trigger hits the top of the viewport
         scrub: true, // Smooth scrubbing, true for 0.1 seconds of lag
@@ -74,7 +95,13 @@ function App() {
         <AboutUs />
       </section>
       <section id="testimonials" className="min-h-screen">
-        <Testomonials />
+        <Testimonials />
+      </section>
+      <section id="testimonials2" className="min-h-screen">
+        <Testimonials2 />
+      </section>
+      <section id="testimonials3" className="min-h-screen">
+        <Testimonials3 />
       </section>
       <section id="rates" className="min-h-screen">
         <Rates />
@@ -82,6 +109,9 @@ function App() {
       <section id="contact" className="min-h-screen">
         <Contact />
       </section>
+      <footer id="footer" className="h-1/2">
+        <Footer />
+      </footer>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import about_us from "./assets/about_us.png";
 import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import { FaBone } from "react-icons/fa6";
 
 const AboutUs = () => {
   useEffect(() => {
@@ -35,7 +36,9 @@ const AboutUs = () => {
   return (
     <div className="flex flex-row max-h-screen bg-emerald-400">
       <div id="text1-container" className="flex flex-col justify-center items-center mx-auto w-2/3 scale-0 origin-top">
-        <h2 className="text-3xl font-bold mb-2">About Us</h2>
+        <h2 className="text-3xl font-bold mb-2">
+          About Us</h2>
+          <FaBone className="text-3xl mt-4" />
         <p className="text-lg py-4 px-8">
           Welcome to Foster Family Dog Care, where our passion is dogs! We are
           Eric and Alicia Foster. With the help of our little daughter Lucy and

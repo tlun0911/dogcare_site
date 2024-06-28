@@ -31,12 +31,12 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <div className="flex flex-row max-h-screen bg-pink-300 ">
-      <div id="image2-container" className="overflow-hidden w-1/2">
+    <div className="flex flex-row min-h-screen bg-pink-300 ">
+      <div id="image2-container" className="overflow-hidden w-1/2 min-h-screen">
         <img
           src={testimonials}
           alt="testimonials"
-          className="object-contain object-center scale-150"
+          className="object-cover object-center scale-150 min-h-screen"
         />
       </div>
       <div
@@ -48,9 +48,9 @@ const Testimonials = () => {
         </h2>
         <p className="text-xl px-8">
           <strong>Kenzie A. - </strong>“Lucky had the best two nights with the
-          Foster family and Moose. Would recommend to anyone looking for a
+          Foster family and Moose. Would <strong>recommend</strong> to anyone looking for a
           loving home for their fur baby while you're away or busy. You can rest
-          assured that they are being well cared for and having fun running
+          assured that they are being <strong>well cared for</strong> and <strong>having fun</strong> running
           around the fenced in backyard. If you weren't sure, the pictures and
           text message updates will certainly help!”
         </p>

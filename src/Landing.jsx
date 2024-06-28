@@ -2,6 +2,7 @@ import landing_img from "./assets/landing_page.png";
 import React, { useRef, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { FaDog } from "react-icons/fa6";
 
 const Landing = () => {
   // Create refs for the elements you want to animate
@@ -56,7 +57,8 @@ const Landing = () => {
           className="leading-relaxed text-6xl mb-14 font-bold text-center tracking-wide"
         >
           Foster Family <br />
-          Dog Care
+          Dog Care <br/>
+          <FaDog className="inline-block text-6xl" />
         </h1>
         <p ref={paragraphRef} id="paragraph1" className="text-3xl font-bolder">
           Where Every Dog Feels Like <span id="span1">Family</span>

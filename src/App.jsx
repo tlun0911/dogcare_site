@@ -66,20 +66,20 @@ function App() {
   }, []);
 
   return (
-    <div className="font-poppins bg-zinc-400 text-sky-800">
-      <section id="landing" className="max-h-screen">
+    <div className="font-poppins bg-zinc-400 text-sky-800 overflow-x-hidden">
+      <section id="landing" className="min-h-screen">
         <Landing />
       </section>
-      <section id="about" className="max-h-screen">
+      <section id="about" className="min-h-screen">
         <AboutUs />
       </section>
-      <section id="testimonials" className="max-h-screen">
+      <section id="testimonials" className="min-h-screen">
         <Testomonials />
       </section>
-      <section id="rates" className="max-h-screen">
+      <section id="rates" className="min-h-screen">
         <Rates />
       </section>
-      <section id="contact" className="max-h-screen">
+      <section id="contact" className="min-h-screen">
         <Contact />
       </section>
     </div>

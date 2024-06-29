@@ -43,7 +43,7 @@ const Testimonials3 = () => {
         id="testimonial3"
         className="flex flex-col justify-center md:items-center mx-auto w-full md:w-1/2 scale-0 origin-top"
       >
-        <p className="md:text-lg mt-16 md:mt-0 py-4 px-1 text-center md:text-start md:px-8">
+        <p className="md:text-base mt-16 md:mt-0 py-4 px-1 text-center md:text-start md:px-8">
           “The Fosters took <strong>amazing</strong>{" "}
           care of our baby, Peanut when we were away for a few days. Peanut had
           a lot of fun playing with Moose. They kept us updated daily on how

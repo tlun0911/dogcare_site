@@ -35,13 +35,13 @@ const AboutUs = () => {
     <div className="flex flex-col md:flex-row md:max-h-screen bg-emerald-400">
       <div
         id="text1-container"
-        className="flex flex-col mt-16 md:mt-0 justify-center
+        className="flex flex-col mt-16 md:mt-2 justify-center
          items-center mx-auto w-full
           md:w-2/3 scale-0 origin-top"
       >
         <h2 className="text-3xl font-bold mb-2">About Us</h2>
         <FaBone className="md:text-3xl mt-2 md:mt-4" />
-        <p className="md:text-lg py-4 px-1 text-center md:text-start md:px-8">
+        <p className="md:text-base py-4 px-1 text-center md:text-start md:px-8">
           Welcome to <strong>Foster Family Dog Care</strong>, where our passion
           is dogs! We are Eric and Alicia Foster. With the help of our little
           daughter Lucy and our rescue dog Moose, we make up this small family

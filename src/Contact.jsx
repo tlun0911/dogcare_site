@@ -88,7 +88,7 @@ const Contact = () => {
          mx-auto scale-0 origin-top"
       >
         <h1 className="mb-4 p-2 text-center font-bold text-3xl">Contact Us</h1>
-        <p className="text-center text-xl mb-4">
+        <p className="text-center text-xl md:text-lg mb-4">
           Have a question? Send us a message!
         </p>
 
@@ -97,21 +97,21 @@ const Contact = () => {
           className="flex flex-col mx-auto w-11/12 md:w-3/4 items-center justify-center"
           onSubmit={handleSubmit}
         >
-          <label htmlFor="user_name" className="mb-2 font-bold text-xl">
+          <label htmlFor="user_name" className="mb-2 font-bold text-xl md:text-lg">
             Name
           </label>
           <input
             type="text"
             id="user_name"
             name="user_name"
-            className="w-3/4 mb-4 p-1 focus:outline-none focus:ring-2 focus:ring-sky-800"
+            className="w-full mb-4 p-1 focus:outline-none focus:ring-2 focus:ring-sky-800"
             value={formDetails.user_name}
             onChange={handleChange}
           />
 
           <label
             htmlFor="user_email"
-            className="text-start font-bold text-xl mb-2"
+            className="text-start font-bold text-xl md:text-lg mb-2"
           >
             Email
           </label>
@@ -119,21 +119,21 @@ const Contact = () => {
             type="email"
             id="user_email"
             name="user_email"
-            className="w-3/4 mb-4 p-1 focus:outline-none focus:ring-2 focus:ring-sky-800"
+            className="w-full mb-4 p-1 focus:outline-none focus:ring-2 focus:ring-sky-800"
             value={formDetails.user_email}
             onChange={handleChange}
           />
 
           <label
             htmlFor="message"
-            className="text-start text-xl font-bold mb-2"
+            className="text-start text-xl md:text-lg font-bold mb-2"
           >
             Message
           </label>
           <textarea
             name="message"
             rows="6"
-            className="w-3/4 mb-4 p-1 focus:outline-none focus:ring-2 focus:ring-sky-800"
+            className="w-full mb-4 p-1 focus:outline-none focus:ring-2 focus:ring-sky-800"
             value={formDetails.message}
             onChange={handleChange}
           />

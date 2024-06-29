@@ -36,7 +36,7 @@ const Testimonials2 = () => {
         id="testimonial2"
         className="flex flex-col justify-center md:items-center mx-auto w-full md:w-1/2 scale-0 origin-top"
       >
-        <p className="md:text-lg py-4 px-1 mt-16 md:mt-0 text-center md:text-start md:px-8">
+        <p className="md:text-base py-4 px-1 mt-16 md:mt-0 text-center md:text-start md:px-8">
           “Last week we got married and honestly
           one of the most stressful parts was leaving our dog chocolate for one
           full day and night. All of our family was at the wedding so we could

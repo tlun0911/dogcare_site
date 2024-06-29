@@ -46,7 +46,7 @@ const Testimonials = () => {
         <h2 className="justify-self-start text-center text-2xl md:text-3xl font-bold mt-16 md:mt-0 mb-8">
           What Our Clients Say -{" "}
         </h2>
-        <p className="md:text-lg py-4 px-1 text-center md:text-start md:px-8">
+        <p className="md:text-base py-4 px-1 text-center md:text-start md:px-8">
           “Lucky had the best two nights with the Foster family and Moose. Would{" "}
           <strong>recommend</strong> to anyone looking for a loving home for
           their fur baby while you're away or busy. You can rest assured that

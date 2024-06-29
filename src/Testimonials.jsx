@@ -31,29 +31,35 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <div className="flex flex-row min-h-screen bg-pink-300 ">
-      <div id="image2-container" className="overflow-hidden w-1/2 min-h-screen">
+    <div className="flex flex-col md:flex-row md:max-h-screen bg-pink-300 ">
+      <div id="image2-container" className="overflow-hidden md:w-1/2 order-last md:order-first">
         <img
           src={testimonials}
           alt="testimonials"
-          className="object-cover object-center scale-150 min-h-screen"
+          className="object-scale-down md:object-cover object-center scale-150 md:min-h-screen"
         />
       </div>
       <div
         id="testimonial1"
-        className="flex flex-col justify-center items-center mx-auto w-1/2 scale-0 origin-top"
+        className="flex flex-col justify-center md:items-center mx-auto w-full md:w-1/2 scale-0 origin-top"
       >
-        <h2 className="justify-self-start text-3xl font-bold mb-8">
+        <h2 className="justify-self-start text-center text-2xl md:text-3xl font-bold mt-16 md:mt-0 mb-8">
           What Our Clients Say -{" "}
         </h2>
-        <p className="text-xl px-8">
-          <strong>Kenzie A. - </strong>“Lucky had the best two nights with the
-          Foster family and Moose. Would <strong>recommend</strong> to anyone looking for a
-          loving home for their fur baby while you're away or busy. You can rest
-          assured that they are being <strong>well cared for</strong> and <strong>having fun</strong> running
-          around the fenced in backyard. If you weren't sure, the pictures and
-          text message updates will certainly help!”
+        <p className="md:text-lg py-4 px-1 text-center md:text-start md:px-8">
+          “Lucky had the best two nights with the Foster family and Moose. Would{" "}
+          <strong>recommend</strong> to anyone looking for a loving home for
+          their fur baby while you're away or busy. You can rest assured that
+          they are being <strong>well cared for</strong> and{" "}
+          <strong>having fun</strong> running around the fenced in backyard. If
+          you weren't sure, the pictures and text message updates will certainly
+          help!”
+          <br />
+          <br />
         </p>
+        <div className="place-self-end text-xl mr-24 mb-4 md:md-0">
+          <strong>- Kenzie A.</strong>
+        </div>
       </div>
     </div>
   );

@@ -31,8 +31,8 @@ const Testimonials3 = () => {
   }, []);
 
   return (
-    <div className="flex flex-row min-h-screen my-auto bg-pink-300">
-      <div id="testimage3-container" className="overflow-hidden w-1/2">
+    <div className="flex flex-col md:flex-row md:max-h-screen bg-pink-300 ">
+      <div id="testimage3-container" className="overflow-hidden md:w-1/2 order-last md:order-first">
         <img
           src={testimonials3}
           alt="testimonials3"
@@ -41,10 +41,10 @@ const Testimonials3 = () => {
       </div>
       <div
         id="testimonial3"
-        className="flex flex-col justify-center items-center mx-auto w-1/2 scale-0 origin-top"
+        className="flex flex-col justify-center md:items-center mx-auto w-full md:w-1/2 scale-0 origin-top"
       >
-        <p className="text-xl px-8">
-          <strong>Lihn C. - </strong>“The Fosters took <strong>amazing</strong>{" "}
+        <p className="md:text-lg mt-16 md:mt-0 py-4 px-1 text-center md:text-start md:px-8">
+          “The Fosters took <strong>amazing</strong>{" "}
           care of our baby, Peanut when we were away for a few days. Peanut had
           a lot of fun playing with Moose. They kept us updated daily on how
           Peanut was doing and super accommodating with her diet and daily
@@ -52,6 +52,9 @@ const Testimonials3 = () => {
           play outside when the weather is nice. I would{" "}
           <strong>highly recommend</strong> the Fosters!”
         </p>
+        <div className="place-self-end text-xl mr-24 mb-4 md:md-0">
+            <strong>- Lihn C.</strong>
+          </div>
       </div>
     </div>
   );

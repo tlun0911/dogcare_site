@@ -32,10 +32,10 @@ const Rates = () => {
   }, []);
 
   return (
-    <div className="flex flex-row max-h-screen bg-cyan-400">
+    <div className="flex flex-col md:flex-row md:max-h-screen bg-cyan-400">
       <div
         id="text4-container"
-        className="leading-relaxed flex flex-col justify-center items-center mx-auto scale-0 origin-top"
+        className="leading-relaxed mt-16 md:mt-0 flex flex-col justify-center items-center mx-auto scale-0 origin-top"
       >
         <h2 className="text-3xl font-bold mb-4">Our Services:</h2>
         <p className="text-lg py-4 px-8">
@@ -47,11 +47,11 @@ const Rates = () => {
           <FaPaw className="text-3xl block mx-auto" />
         </p>
       </div>
-      <div id="image4-container" className="overflow-hidden w-1/2">
+      <div id="image4-container" className="overflow-hidden md:w-1/2 order-last md:order-0">
         <img
           src={rates}
           alt="rates"
-          className="object-cover object-center scale-150"
+          className="object-scale-down md:object-cover object-center scale-150 md:min-h-screen"
         />
       </div>
     </div>

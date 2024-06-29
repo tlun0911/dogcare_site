@@ -31,13 +31,13 @@ const Testimonials2 = () => {
   }, []);
 
   return (
-    <div className="flex flex-row max-h-screen bg-pink-300 ">
+    <div className="flex flex-col md:flex-row md:max-h-screen bg-pink-300 ">
       <div
         id="testimonial2"
-        className="flex flex-col justify-center items-center mx-auto w-1/2 scale-0 origin-top"
+        className="flex flex-col justify-center md:items-center mx-auto w-full md:w-1/2 scale-0 origin-top"
       >
-        <p className="text-xl px-8">
-          <strong>Hayley P. - </strong>“Last week we got married and honestly
+        <p className="md:text-lg py-4 px-1 mt-16 md:mt-0 text-center md:text-start md:px-8">
+          “Last week we got married and honestly
           one of the most stressful parts was leaving our dog chocolate for one
           full day and night. All of our family was at the wedding so we could
           not leave him where he feels most comfortable. <br />I found Foster
@@ -55,8 +55,11 @@ const Testimonials2 = () => {
           <strong> kind</strong> and <strong>compassionate</strong>. I will be
           using them in the future because chocolate loved it there so much!!!!”
         </p>
+        <div className="place-self-end text-xl mr-24 mb-4 md:md-0">
+            <strong>- Hayley P.</strong>
+          </div>
       </div>
-      <div id="testimage2-container" className="overflow-hidden w-1/2">
+      <div id="testimage2-container" className="overflow-hidden md:w-1/2 order-last md:order-0">
         <img
           src={testimonials2}
           alt="testimonials2"

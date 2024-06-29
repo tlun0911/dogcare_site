@@ -42,25 +42,25 @@ const Landing = () => {
   }, []);
 
   return (
-    <div className="flex flex-row max-h-screen">
-      <div className="overflow-hidden  w-1/2">
+    <div className="flex flex-col md:flex-row max-h-full justify-center items-center">
+      <div className="overflow-hidden md:w-1/2 h-auto md:h-screen">
         <img
           src={landing_img}
           alt="landing"
-          className="object-none object-center"
+          className="object-contain md:object-none object-center h-auto md:h-screen w-full "
         />
       </div>
-      <div className="flex flex-col justify-center items-center mx-auto">
+      <div className="flex flex-col h-1/2 md:h-full mx-auto">
         <h1
           ref={headingRef}
           id="heading1"
-          className="leading-relaxed text-6xl mb-14 font-bold text-center tracking-wide"
+          className="md:leading-relaxed text-2xl md:text-6xl mb-4 md:mb-14 font-bold text-center tracking-wide"
         >
           Foster Family <br />
           Dog Care <br/>
-          <FaDog className="inline-block text-6xl" />
+          <FaDog className="inline-block text-3xl md:text-6xl" />
         </h1>
-        <p ref={paragraphRef} id="paragraph1" className="text-3xl font-bolder">
+        <p ref={paragraphRef} id="paragraph1" className="text-center text-xl font-bolder">
           Where Every Dog Feels Like <span id="span1">Family</span>
         </p>
       </div>

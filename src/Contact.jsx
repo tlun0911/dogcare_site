@@ -55,7 +55,6 @@ const Contact = () => {
       },
       scale: 1, // Target scale. Assuming the image starts larger, e.g., style={{transform: "scale(1.5)"}}
       ease: "none", // Use a linear ease for smooth scaling
-
     });
 
     gsap.to("#form-container", {
@@ -71,8 +70,11 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="flex flex-row max-h-screen bg-indigo-300">
-      <div id="image5-container" className="overflow-hidden w-1/2">
+    <div className="flex flex-col md:flex-row md:max-h-screen bg-indigo-300">
+      <div
+        id="image5-container"
+        className="overflow-hidden md:w-1/2 order-last md:order-first"
+      >
         <img
           src={contact}
           alt="contact"
@@ -81,7 +83,9 @@ const Contact = () => {
       </div>
       <div
         id="form-container"
-        className="flex flex-col justify-center items-center mx-auto w-1/2 scale-0 origin-top"
+        className="leading-relaxed mt-16 md:mt-0 flex
+         flex-col justify-center items-center
+         mx-auto scale-0 origin-top"
       >
         <h1 className="mb-4 p-2 text-center font-bold text-3xl">Contact Us</h1>
         <p className="text-center text-xl mb-4">
@@ -89,7 +93,7 @@ const Contact = () => {
         </p>
 
         <form
-          className="flex flex-col mx-auto w-2/3 items-center justify-center"
+          className="flex flex-col mx-auto w-11/12 md:w-3/4 items-center justify-center"
           onSubmit={handleSubmit}
         >
           <label htmlFor="user_name" className="mb-2 font-bold text-xl">
@@ -99,36 +103,43 @@ const Contact = () => {
             type="text"
             id="user_name"
             name="user_name"
-            className="w-2/3 mb-4 p-1 focus:outline-none focus:ring-2 focus:ring-sky-800"
+            className="w-3/4 mb-4 p-1 focus:outline-none focus:ring-2 focus:ring-sky-800"
             value={formDetails.user_name}
             onChange={handleChange}
           />
 
-          <label htmlFor="user_email" className="text-start font-bold text-xl mb-2">
+          <label
+            htmlFor="user_email"
+            className="text-start font-bold text-xl mb-2"
+          >
             Email
           </label>
           <input
             type="email"
             id="user_email"
             name="user_email"
-            className="w-2/3 mb-4 p-1 focus:outline-none focus:ring-2 focus:ring-sky-800"
+            className="w-3/4 mb-4 p-1 focus:outline-none focus:ring-2 focus:ring-sky-800"
             value={formDetails.user_email}
             onChange={handleChange}
           />
 
-          <label htmlFor="message" className="text-start text-xl font-bold mb-2">
+          <label
+            htmlFor="message"
+            className="text-start text-xl font-bold mb-2"
+          >
             Message
           </label>
           <textarea
             name="message"
             rows="6"
-            className="w-2/3 mb-4 p-1 focus:outline-none focus:ring-2 focus:ring-sky-800"
+            className="w-3/4 mb-4 p-1 focus:outline-none focus:ring-2 focus:ring-sky-800"
             value={formDetails.message}
             onChange={handleChange}
           />
 
           <button
             className="border-2 border-sky-800 py-2 px-4 
+            mb-4 md:mb-0
           rounded-2xl hover:bg-sky-800 
           hover:text-white
           hover:ring-2 hover:ring-white"

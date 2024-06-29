@@ -83,7 +83,6 @@ function App() {
         scrub: true, // Smooth scrubbing, true for 0.1 seconds of lag
       },
     });
-
   }, []);
 
   return (

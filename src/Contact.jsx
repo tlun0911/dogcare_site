@@ -89,9 +89,10 @@ const Contact = () => {
       >
         <h1 className="mb-4 p-2 text-center font-bold text-3xl">Contact Us</h1>
         <p className="text-center text-xl mb-4">
-          Have a question or want to work together? Send us a message!
+          Have a question? Send us a message!
         </p>
 
+        
         <form
           className="flex flex-col mx-auto w-11/12 md:w-3/4 items-center justify-center"
           onSubmit={handleSubmit}

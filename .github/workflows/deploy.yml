@@ -26,8 +26,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    env:
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -37,6 +36,8 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
+      - name: Configure NPM to use the NPM_TOKEN
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
       - name: Install dependencies
         run: npm ci
       - name: Build

@@ -1,10 +1,10 @@
-import { useEffect } from "react";
+import { useGSAP } from "@gsap/react";
 import testimonials3 from "./assets/testimonials3.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Testimonials3 = () => {
-  useEffect(() => {
+  useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to("#testimage3-container img", {

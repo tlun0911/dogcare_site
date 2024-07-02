@@ -1,11 +1,14 @@
 import { useEffect } from "react";
 import testimonials from "./assets/testimonials.png";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 
 const Testimonials = () => {
-  useEffect(() => {
+  useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrambleTextPlugin);
 
     gsap.to("#image2-container img", {
       scrollTrigger: {
@@ -18,21 +21,15 @@ const Testimonials = () => {
       ease: "none", // Use a linear ease for smooth scaling
     });
 
-    gsap.to("#testimonial1", {
-      scrollTrigger: {
-        trigger: "#testimonial1",
-        start: "top bottom", // Start the animation when the top of the trigger hits the bottom of the viewport
-        end: "top top", // End the animation when the top of the trigger hits the top of the viewport
-        scrub: true, // Smooth scrubbing, consider a small number for slight delay (e.g., 0.5)
-      },
-      scale: 1, // Target scale. Assuming the image starts larger, e.g., style={{transform: "scale(1.5)"}}
-      ease: "none", // Use a linear ease for smooth scaling
-    });
+    gsap.to("#testimonial1", { duration: 1, scrambleText: "THIS IS NEW TEXT" });
   }, []);
 
   return (
     <div className="flex flex-col md:flex-row md:max-h-screen bg-pink-300 ">
-      <div id="image2-container" className="overflow-hidden md:w-1/2 order-last md:order-first">
+      <div
+        id="image2-container"
+        className="overflow-hidden md:w-1/2 order-last md:order-first"
+      >
         <img
           src={testimonials}
           alt="testimonials"
@@ -41,7 +38,7 @@ const Testimonials = () => {
       </div>
       <div
         id="testimonial1"
-        className="flex flex-col justify-center md:items-center mx-auto w-full md:w-1/2 scale-0 origin-top"
+        className="flex flex-col justify-center md:items-center mx-auto w-full md:w-1/2 origin-top"
       >
         <h2 className="justify-self-start text-center text-2xl md:text-3xl font-bold mt-16 md:mt-0 mb-8">
           What Our Clients Say -{" "}

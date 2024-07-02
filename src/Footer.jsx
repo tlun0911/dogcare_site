@@ -8,16 +8,7 @@ const Footer = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to("#text6-container", {
-      scrollTrigger: {
-        trigger: "#text6-container",
-        start: "top bottom", // Start the animation when the top of the trigger hits the bottom of the viewport
-        end: "top top", // End the animation when the top of the trigger hits the top of the viewport
-        scrub: true, // Smooth scrubbing, consider a small number for slight delay (e.g., 0.5)
-      },
-      scale: 1, // Target scale. Assuming the image starts larger, e.g., style={{transform: "scale(1.5)"}}
-      ease: "none", // Use a linear ease for smooth scaling
-    });
+
   }, []);
 
   return (

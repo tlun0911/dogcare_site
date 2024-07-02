@@ -18,23 +18,21 @@ const Testimonials2 = () => {
       ease: "none", // Use a linear ease for smooth scaling
     });
 
-    gsap.to("#testimonial2", {
-      scrollTrigger: {
-        trigger: "#testimonial2",
-        start: "top bottom", // Start the animation when the top of the trigger hits the bottom of the viewport
-        end: "top top", // End the animation when the top of the trigger hits the top of the viewport
-        scrub: true, // Smooth scrubbing, consider a small number for slight delay (e.g., 0.5)
-      },
-      scale: 1, // Target scale. Assuming the image starts larger, e.g., style={{transform: "scale(1.5)"}}
-      ease: "none", // Use a linear ease for smooth scaling
-    });
+
   }, []);
 
   return (
     <div className="flex flex-col md:flex-row md:max-h-screen bg-pink-300 ">
+      <div id="testimage2-container" className="overflow-hidden md:w-1/2 order-1 md:order-none">
+        <img
+          src={testimonials2}
+          alt="testimonials2"
+          className="object-contain object-center scale-150"
+        />
+      </div>
       <div
         id="testimonial2"
-        className="flex flex-col justify-center md:items-center mx-auto w-full md:w-1/2 scale-0 origin-top"
+        className="flex flex-col justify-center md:items-center mx-auto w-full md:w-1/2 origin-top"
       >
         <p className="md:text-base py-4 px-1 mt-16 md:mt-0 text-center md:text-start md:px-8">
           “Last week we got married and honestly
@@ -58,13 +56,6 @@ const Testimonials2 = () => {
         <div className="place-self-end text-xl mr-24 mb-4 md:md-0">
             <strong>- Hayley P.</strong>
           </div>
-      </div>
-      <div id="testimage2-container" className="overflow-hidden md:w-1/2 order-last md:order-0">
-        <img
-          src={testimonials2}
-          alt="testimonials2"
-          className="object-contain object-center scale-150"
-        />
       </div>
     </div>
   );

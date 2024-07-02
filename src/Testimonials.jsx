@@ -21,7 +21,7 @@ const Testimonials = () => {
       ease: "none", // Use a linear ease for smooth scaling
     });
 
-    gsap.to("#testimonial1", { duration: 1, scrambleText: "THIS IS NEW TEXT" });
+    
   }, []);
 
   return (

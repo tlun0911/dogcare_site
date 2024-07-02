@@ -19,16 +19,7 @@ const AboutUs = () => {
       ease: "none", // Use a linear ease for smooth scaling
     });
 
-    gsap.to("#text1-container", {
-      scrollTrigger: {
-        trigger: "#text1-container",
-        start: "top bottom", // Start the animation when the top of the trigger hits the bottom of the viewport
-        end: "top top", // End the animation when the top of the trigger hits the top of the viewport
-        scrub: true, // Smooth scrubbing, consider a small number for slight delay (e.g., 0.5)
-      },
-      scale: 1, // Target scale. Assuming the image starts larger, e.g., style={{transform: "scale(1.5)"}}
-      ease: "none", // Use a linear ease for smooth scaling
-    });
+
   }, []);
 
   return (
@@ -37,7 +28,7 @@ const AboutUs = () => {
         id="text1-container"
         className="flex flex-col mt-16 md:mt-2 justify-center
          items-center mx-auto w-full
-          md:w-2/3 scale-0 origin-top"
+          md:w-2/3 origin-top"
       >
         <h2 className="text-3xl font-bold mb-2">About Us</h2>
         <FaBone className="md:text-3xl mt-2 md:mt-4" />

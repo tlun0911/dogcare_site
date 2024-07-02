@@ -18,21 +18,12 @@ const Testimonials3 = () => {
       ease: "none", // Use a linear ease for smooth scaling
     });
 
-    gsap.to("#testimonial3", {
-      scrollTrigger: {
-        trigger: "#testimonial3",
-        start: "top bottom", // Start the animation when the top of the trigger hits the bottom of the viewport
-        end: "top top", // End the animation when the top of the trigger hits the top of the viewport
-        scrub: true, // Smooth scrubbing, consider a small number for slight delay (e.g., 0.5)
-      },
-      scale: 1, // Target scale. Assuming the image starts larger, e.g., style={{transform: "scale(1.5)"}}
-      ease: "none", // Use a linear ease for smooth scaling
-    });
+
   }, []);
 
   return (
     <div className="flex flex-col md:flex-row md:max-h-screen bg-pink-300 ">
-      <div id="testimage3-container" className="overflow-hidden md:w-1/2 order-last md:order-first">
+      <div id="testimage3-container" className="overflow-hidden md:w-1/2 order-1 md:order-none">
         <img
           src={testimonials3}
           alt="testimonials3"
@@ -41,7 +32,7 @@ const Testimonials3 = () => {
       </div>
       <div
         id="testimonial3"
-        className="flex flex-col justify-center md:items-center mx-auto w-full md:w-1/2 scale-0 origin-top"
+        className="flex flex-col justify-center md:items-center mx-auto w-full md:w-1/2 origin-top"
       >
         <p className="md:text-base mt-16 md:mt-0 py-4 px-1 text-center md:text-start md:px-8">
           “The Fosters took <strong>amazing</strong>{" "}

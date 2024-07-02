@@ -57,16 +57,8 @@ const Contact = () => {
       ease: "none", // Use a linear ease for smooth scaling
     });
 
-    gsap.to("#form-container", {
-      scrollTrigger: {
-        trigger: "#form-container",
-        start: "top bottom", // Start the animation when the top of the trigger hits the bottom of the viewport
-        end: "top top", // End the animation when the top of the trigger hits the top of the viewport
-        scrub: true, // Smooth scrubbing, consider a small number for slight delay (e.g., 0.5)
-      },
-      scale: 1, // Target scale. Assuming the image starts larger, e.g., style={{transform: "scale(1.5)"}}
-      ease: "none", // Use a linear ease for smooth scaling
-    });
+
+    
   }, []);
 
   return (
@@ -85,7 +77,7 @@ const Contact = () => {
         id="form-container"
         className="leading-relaxed mt-16 md:mt-0 flex
          flex-col justify-center items-center
-         mx-auto scale-0 origin-top"
+         mx-auto origin-top"
       >
         <h1 className="mb-4 p-2 text-center font-bold text-3xl">Contact Us</h1>
         <p className="text-center text-xl md:text-lg mb-4">

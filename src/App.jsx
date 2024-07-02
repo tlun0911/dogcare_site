@@ -1,5 +1,6 @@
 import gsap from "gsap";
 import { useEffect } from "react";
+import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Landing from "./Landing";
 import AboutUs from "./AboutUs";
@@ -11,7 +12,7 @@ import Testimonials2 from "./Testimonials2";
 import Testimonials3 from "./Testimonials3";
 
 function App() {
-  useEffect(() => {
+  useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     // Parallax effect for the Landing section
@@ -36,43 +37,25 @@ function App() {
       },
     });
 
-    gsap.to("#testimonials", {
-      y: -100, // Adjust the movement speed and direction
-      scrollTrigger: {
-        trigger: "#testimonials",
-        start: "top top", // When the top of the trigger hits the center of the viewport
-        end: "bottom top", // When the bottom of the trigger hits the top of the viewport
-        scrub: true, // Smooth scrubbing, true for 0.1 seconds of lag
-      },
-    });
-    gsap.to("#testimonials2", {
-      y: -100, // Adjust the movement speed and direction
-      scrollTrigger: {
-        trigger: "#testimonials2",
-        start: "top top", // When the top of the trigger hits the center of the viewport
-        end: "bottom top", // When the bottom of the trigger hits the top of the viewport
-        scrub: true, // Smooth scrubbing, true for 0.1 seconds of lag
-      },
-    });
-    gsap.to("#testimonials3", {
-      y: -100, // Adjust the movement speed and direction
-      scrollTrigger: {
-        trigger: "#testimonials3",
-        start: "top top", // When the top of the trigger hits the center of the viewport
-        end: "bottom top", // When the bottom of the trigger hits the top of the viewport
-        scrub: true, // Smooth scrubbing, true for 0.1 seconds of lag
-      },
-    });
+    const wrapper = document.querySelector("#testimonials-wrapper");
+    const totalWidth = wrapper.scrollWidth;
+    const viewportWidth = window.innerWidth;
+    const scrollDistance = totalWidth - viewportWidth; // This might need adjustment based on your layout
 
-    gsap.to("#rates", {
-      y: -100, // Adjust the movement speed and direction
-      scrollTrigger: {
-        trigger: "#rates",
-        start: "top top", // When the top of the trigger hits the center of the viewport
-        end: "bottom top", // When the bottom of the trigger hits the top of the viewport
-        scrub: true, // Smooth scrubbing, true for 0.1 seconds of lag
-      },
-    });
+    if (window.innerWidth > 768) {
+      gsap.to(wrapper, {
+        x: () => `-${scrollDistance}px`, // Ensure this is a negative value to scroll left
+        ease: "none",
+        scrollTrigger: {
+          trigger: wrapper,
+          start: "top top",
+          endTrigger: "#test-three", // Assuming the ID of the last section is 'test-last'
+          end: scrollDistance, // Adjust this based on when you want the scroll to stop
+          scrub: true,
+          pin: true,
+        },
+      });
+    }
 
     gsap.to("#contact", {
       y: -100, // Adjust the movement speed and direction
@@ -93,15 +76,21 @@ function App() {
       <section id="about" className="min-h-screen">
         <AboutUs />
       </section>
-      <section id="testimonials" className="min-h-screen">
-        <Testimonials />
-      </section>
-      <section id="testimonials2" className="min-h-screen">
-        <Testimonials2 />
-      </section>
-      <section id="testimonials3" className="min-h-screen">
-        <Testimonials3 />
-      </section>
+      <div
+        id="testimonials-wrapper"
+        style={{ minWidth: "300vw" }}
+        className="min-h-screen flex flex-col md:flex-nowrap md:flex-row content-center overflow-x-hidden"
+      >
+        <section id="test-one" className="w-screen">
+          <Testimonials />
+        </section>
+        <section id="test-two" className="w-screen">
+          <Testimonials2 />
+        </section>
+        <section id="test-three" className="w-screen">
+          <Testimonials3 />
+        </section>
+      </div>
       <section id="rates" className="min-h-screen">
         <Rates />
       </section>

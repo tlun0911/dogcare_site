@@ -24,7 +24,7 @@ function App() {
       effects: true,
       normalizeScroll: true,
       smooth:2,
-      smoothTouch:0.4,
+      smoothTouch:0.1,
 
     });
 

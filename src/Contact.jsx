@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import contact from "./assets/contact.png";
 
 const Contact = () => {
   const [formDetails, setFormDetails] = useState({
@@ -56,9 +55,6 @@ const Contact = () => {
       scale: 1, // Target scale. Assuming the image starts larger, e.g., style={{transform: "scale(1.5)"}}
       ease: "none", // Use a linear ease for smooth scaling
     });
-
-
-    
   }, []);
 
   return (
@@ -67,11 +63,7 @@ const Contact = () => {
         id="image5-container"
         className="overflow-hidden md:w-1/2 order-last md:order-first"
       >
-        <img
-          src={contact}
-          alt="contact"
-          className="object-cover object-center scale-150"
-        />
+        <img alt="contact" className="object-cover object-center scale-150" />
       </div>
       <div
         id="form-container"
@@ -84,12 +76,14 @@ const Contact = () => {
           Have a question? Send us a message!
         </p>
 
-        
         <form
           className="flex flex-col mx-auto w-11/12 md:w-3/4 items-center justify-center"
           onSubmit={handleSubmit}
         >
-          <label htmlFor="user_name" className="mb-2 font-bold text-xl md:text-lg">
+          <label
+            htmlFor="user_name"
+            className="mb-2 font-bold text-xl md:text-lg"
+          >
             Name
           </label>
           <input

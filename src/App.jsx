@@ -24,7 +24,6 @@ function App() {
       wrapper: "#smooth-wrapper",
       effects: true,
       speed: 0.75,
-      normalizeScroll: true,
       smooth: 1,
     });
 

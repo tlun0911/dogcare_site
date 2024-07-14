@@ -23,13 +23,10 @@ function App() {
       wrapper: "#smooth-wrapper",
       effects: true,
       normalizeScroll: true,
-      smooth:2,
-      smoothTouch:0.1,
-
+      smooth: 1,
     });
 
     // smoother.effects("img", { speed: "auto" });
-
   }, []);
 
   return (
@@ -48,21 +45,15 @@ function App() {
           <section id="about3" className="relative min-h-screen">
             <AboutUs3 />
           </section>
-          <div
-            id="testimonials-wrapper"
-            style={{ minWidth: "300vw" }}
-            className=" relative min-h-screen flex flex-col md:flex-nowrap md:flex-row content-center overflow-x-hidden"
-          >
-            <section id="test-one" className="w-screen">
-              <Testimonials />
-            </section>
-            <section id="test-two" className="w-screen">
-              <Testimonials2 />
-            </section>
-            <section id="test-three" className="w-screen">
-              <Testimonials3 />
-            </section>
-          </div>
+          <section id="test-one" className="min-h-screen">
+            <Testimonials />
+          </section>
+          <section id="test-two" className="min-h-screen">
+            <Testimonials2 />
+          </section>
+          <section id="test-three" className="min-h-screen">
+            <Testimonials3 />
+          </section>
           <section id="rates" className="min-h-screen">
             <Rates />
           </section>

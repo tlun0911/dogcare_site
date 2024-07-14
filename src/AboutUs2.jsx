@@ -24,7 +24,7 @@ const AboutUs2 = () => {
           src={about_us_2}
           alt="About Us 2"
           data-speed="auto"
-          className="object-fill md:object-none absolute inset-x-0 top-0"
+          className="absolute top-0 left-0 h-[115%] w-full"
         />
       </div>
       <div id="p2-container" className="px-4 place-content-center my-4 md:my-8 ">

@@ -1,61 +1,51 @@
-import { useEffect } from "react";
 import testimonials from "./assets/testimonials.png";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 
 const Testimonials = () => {
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.registerPlugin(ScrambleTextPlugin);
-
-    gsap.to("#image2-container img", {
-      scrollTrigger: {
-        trigger: "#image2-container",
-        start: "top bottom", // Start the animation when the top of the trigger hits the bottom of the viewport
-        end: "top top", // End the animation when the top of the trigger hits the top of the viewport
-        scrub: true, // Smooth scrubbing, consider a small number for slight delay (e.g., 0.5)
-      },
-      scale: 1, // Target scale. Assuming the image starts larger, e.g., style={{transform: "scale(1.5)"}}
-      ease: "none", // Use a linear ease for smooth scaling
-    });
-
-    
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row md:max-h-screen bg-pink-300 ">
+    <div
+      id="test1-container"
+      className="bg-lime-200 min-h-screen grid grid-rows-2
+      md:grid-cols-2 md:grid-rows-1"
+    >
       <div
-        id="image2-container"
-        className="overflow-hidden md:w-1/2 order-last md:order-first"
+        id="test1-image-container"
+        className="relative h-full w-full overflow-hidden order-last md:order-first"
       >
         <img
           src={testimonials}
           alt="testimonials"
-          className="object-scale-down md:object-cover object-center scale-150 md:min-h-screen"
+          data-speed="auto"
+          className="absolute top-0 left-0 h-[115%] w-full"
         />
       </div>
-      <div
-        id="testimonial1"
-        className="flex flex-col justify-center md:items-center mx-auto w-full md:w-1/2 origin-top"
-      >
-        <h2 className="justify-self-start text-center text-2xl md:text-3xl font-bold mt-16 md:mt-0 mb-8">
+      <div id="test1-content-container" className="p-4 place-content-center">
+        <h2 className="overflow-hidden text-center font-bold text-4xl mb-4">
           What Our Clients Say -{" "}
         </h2>
-        <p className="md:text-base py-4 px-1 text-center md:text-start md:px-8">
+        <p
+          className="overflow-hidden text-wrap leading-relaxed md:leading-loose 
+        text-justify text-xl md:text-2xl"
+        >
           “Lucky had the best two nights with the Foster family and Moose. Would{" "}
-          <strong>recommend</strong> to anyone looking for a loving home for
-          their fur baby while you're away or busy. You can rest assured that
-          they are being <strong>well cared for</strong> and{" "}
-          <strong>having fun</strong> running around the fenced in backyard. If
-          you weren't sure, the pictures and text message updates will certainly
-          help!”
+          <span className="inline-block font-bold">recommend</span> to anyone
+          looking for a loving home for their fur baby while you're away or
+          busy. You can rest assured that they are being{" "}
+          <span className="inline-block font-bold">well cared for</span> and{" "}
+          <span className="inline-block font-bold">having fun</span> running
+          around the fenced in backyard. If you weren't sure, the pictures and
+          text message updates will certainly help!”
           <br />
           <br />
         </p>
-        <div className="place-self-end text-xl mr-24 mb-4 md:md-0">
-          <strong>- Kenzie A.</strong>
+        <div className="text-right font-bold">
+          <span className="text-xl pr-12 mt-4">- Kenzie A.</span>
         </div>
       </div>
     </div>

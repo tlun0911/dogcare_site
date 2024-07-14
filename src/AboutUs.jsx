@@ -3,7 +3,6 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import gsap from "gsap";
-import { FaBone } from "react-icons/fa6";
 
 const AboutUs = () => {
   useGSAP(() => {
@@ -45,7 +44,7 @@ const AboutUs = () => {
       <div id="p1-container" className="p-4 place-content-center ">
         <h1
           id="about-us-heading"
-          className="overflow-hidden text-center text-4xl mb-4"
+          className="overflow-hidden font-bold text-center text-4xl mb-4"
         >
           About Us
         </h1>
@@ -73,7 +72,7 @@ const AboutUs = () => {
           data-speed="auto"
           alt="about us"
           id="about-us-img"
-          className="object-none md:object-fill absolute top-0 left-0 w-full"
+          className="absolute top-0 left-0 h-auto w-full"
         />
       </div>
     </div>

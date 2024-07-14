@@ -1,39 +1,6 @@
 import about_us from "./assets/about_us.png";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SplitText } from "gsap/SplitText";
-import gsap from "gsap";
 
 const AboutUs = () => {
-  useGSAP(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.registerPlugin(SplitText);
-
-    let split1 = new SplitText("#about-us-heading", {
-      type: "chars, words, lines",
-    });
-    let split2 = new SplitText("#p1-content", { type: "chars, words, lines" });
-    let t1 = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#about-us-container",
-        start: "top bottom",
-        end: "top center",
-        scrub: true,
-      },
-    });
-
-    t1.from(split1.chars, {
-      yPercent: 130,
-      stagger: 0.02,
-      ease: "back.out",
-      duration: 1,
-    }).from(split2.chars, {
-      yPercent: 130,
-      stagger: 0.02,
-      ease: "back.out",
-      duration: 1,
-    });
-  }, []);
 
   return (
     <div

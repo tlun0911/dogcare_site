@@ -1,14 +1,6 @@
-import { useEffect } from "react";
 import rates from "./assets/rates.png";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Rates = () => {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-
-  }, []);
 
   return (
     <div id="rates-container" className="min-h-screen grid grid-rows-2

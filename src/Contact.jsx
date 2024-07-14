@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {  useState } from "react";
+import contact_img from "./assets/contact_img.jpg";
 
 const Contact = () => {
   const [formDetails, setFormDetails] = useState({
@@ -21,7 +20,7 @@ const Contact = () => {
         "contact_service",
         "contact_form",
         e.target,
-        "yaWyunWk6MZdAVQlJ"
+        "" // YOUR USER ID HERE
       )
       .then(
         (result) => {
@@ -42,37 +41,31 @@ const Contact = () => {
       );
   };
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.to("#image5-container img", {
-      scrollTrigger: {
-        trigger: "#image5-container",
-        start: "top bottom", // Start the animation when the top of the trigger hits the bottom of the viewport
-        end: "top top", // End the animation when the top of the trigger hits the top of the viewport
-        scrub: true, // Smooth scrubbing, consider a small number for slight delay (e.g., 0.5)
-      },
-      scale: 1, // Target scale. Assuming the image starts larger, e.g., style={{transform: "scale(1.5)"}}
-      ease: "none", // Use a linear ease for smooth scaling
-    });
-  }, []);
-
   return (
-    <div className="flex flex-col md:flex-row md:max-h-screen bg-indigo-300">
+    <div
+      id="contact-container"
+      className="bg-fuchsia-200 min-h-screen grid grid-rows-2
+      md:grid-cols-2 md:grid-rows-1"
+    >
       <div
-        id="image5-container"
-        className="overflow-hidden md:w-1/2 order-last md:order-first"
+        id="contact-image-container"
+        className="relative h-full w-full overflow-hidden order-last md:order-first"
       >
-        <img alt="contact" className="object-cover object-center scale-150" />
+        <img
+          alt="contact"
+          data-speed="auto"
+          src={contact_img}
+          className="absolute top-0 left-0 h-[115%] w-full"
+        />
       </div>
-      <div
-        id="form-container"
-        className="leading-relaxed mt-16 md:mt-0 flex
-         flex-col justify-center items-center
-         mx-auto origin-top"
-      >
-        <h1 className="mb-4 p-2 text-center font-bold text-3xl">Contact Us</h1>
-        <p className="text-center text-xl md:text-lg mb-4">
+      <div id="contact-content-container" className="p-4 place-content-center">
+        <h1 className="overflow-hidden font-bold text-center text-4xl mb-8">
+          Contact Us
+        </h1>
+        <p
+          className="overflow-hidden text-wrap leading-relaxed md:leading-loose 
+        text-center text-xl md:text-2xl"
+        >
           Have a question? Send us a message!
         </p>
 
@@ -90,7 +83,7 @@ const Contact = () => {
             type="text"
             id="user_name"
             name="user_name"
-            className="w-full mb-4 p-1 focus:outline-none focus:ring-2 focus:ring-sky-800"
+            className="w-full mb-2 p-1 focus:outline-none focus:ring-2 focus:ring-sky-800"
             value={formDetails.user_name}
             onChange={handleChange}
           />
@@ -105,7 +98,7 @@ const Contact = () => {
             type="email"
             id="user_email"
             name="user_email"
-            className="w-full mb-4 p-1 focus:outline-none focus:ring-2 focus:ring-sky-800"
+            className="w-full mb-2 p-1 focus:outline-none focus:ring-2 focus:ring-sky-800"
             value={formDetails.user_email}
             onChange={handleChange}
           />
@@ -119,14 +112,14 @@ const Contact = () => {
           <textarea
             name="message"
             rows="6"
-            className="w-full mb-4 p-1 focus:outline-none focus:ring-2 focus:ring-sky-800"
+            className="w-full mb-2 p-1 focus:outline-none focus:ring-2 focus:ring-sky-800"
             value={formDetails.message}
             onChange={handleChange}
           />
 
           <button
             className="border-2 border-sky-800 py-2 px-4 
-            mb-4 md:mb-0
+            mb-2 md:mb-0
           rounded-2xl hover:bg-sky-800 
           hover:text-white
           hover:ring-2 hover:ring-white"

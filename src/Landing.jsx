@@ -20,6 +20,7 @@ const Landing = () => {
     function start() {
       let t1 = gsap.timeline({});
       t1.from(split.chars, {
+        delay: 0.5,
         x: -100,
         opacity: 0,
         duration: 1.5,

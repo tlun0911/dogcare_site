@@ -1,14 +1,6 @@
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SplitText } from "gsap/SplitText";
-import gsap from "gsap";
 import about_us_2 from "./assets/landing_page.png";
 
 const AboutUs2 = () => {
-  useGSAP(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.registerPlugin(SplitText);
-  }, []);
   return (
     <div
       id="about-us-container2"

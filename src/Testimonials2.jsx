@@ -1,12 +1,6 @@
 import testimonials2 from "./assets/testimonial2.png";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
 
 const Testimonials2 = () => {
-  useGSAP(() => {
-    gsap.registerPlugin(ScrollTrigger);
-  }, []);
 
   return (
     <div

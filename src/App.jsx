@@ -1,8 +1,8 @@
 import gsap from "gsap";
-import { useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
 import Landing from "./Landing";
 import AboutUs from "./AboutUs";
 import AboutUs2 from "./AboutUs2";
@@ -17,14 +17,42 @@ import Testimonials3 from "./Testimonials3";
 function App() {
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    gsap.registerPlugin(SplitText);
 
     const smoother = ScrollSmoother.create({
       content: "#smooth-content",
       wrapper: "#smooth-wrapper",
       effects: true,
+      speed: 0.75,
       normalizeScroll: true,
       smooth: 1,
     });
+
+    // Target all <p> tags
+    document.querySelectorAll("p").forEach((p) => {
+      // Split the text of each <p> tag into lines
+      const split = new SplitText(p, { type: "lines" });
+
+      // Animate each line
+      split.lines.forEach((line) => {
+        gsap.from(line, {
+          scrollTrigger: {
+            trigger: line,
+            start: "top bottom", // Start the animation when the top of the line hits the bottom of the viewport
+            end: "+=200", // End after 100 pixels of scrolling
+            scrub: true, // Smooth scrubbing
+            toggleActions: "play none none reverse",
+
+          },
+          y: 30, // Start 30 pixels below its final position
+          opacity: 0,
+          duration: 0.8,
+          ease: "power1.out",
+        });
+      });
+    });
+
+    
 
     // smoother.effects("img", { speed: "auto" });
   }, []);

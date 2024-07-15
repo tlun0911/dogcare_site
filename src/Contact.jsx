@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import { useState } from "react";
 import contact_img from "./assets/contact_img.jpg";
 
 const Contact = () => {
@@ -111,6 +111,7 @@ const Contact = () => {
           </label>
           <textarea
             name="message"
+            id="message"
             rows="6"
             className="w-full mb-2 p-1 focus:outline-none focus:ring-2 focus:ring-sky-800"
             value={formDetails.message}

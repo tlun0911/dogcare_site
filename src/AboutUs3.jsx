@@ -5,7 +5,7 @@ const AboutUs = () => {
   return (
     <div
       id="about-us-container3"
-      className="bg-slate-300 min-h-screen grid grid-rows-2
+      className="bg-green-300 min-h-screen grid grid-rows-2
       md:grid-cols-2 md:grid-rows-1 "
     >
       <div id="p3-container" className="p-4 place-content-center ">

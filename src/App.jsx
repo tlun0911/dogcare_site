@@ -128,34 +128,42 @@ function App() {
             >
               <nav
                 id="navbar-container"
-                className="flex justify-center w-full bg-slate-800 bg-opacity-40 max-h-8"
+                className="flex justify-center w-full max-h-8"
               >
                 <ul
                   id="navbar-list"
-                  className="flex space-x-3 md:space-x-8 my-auto justify-center text-lg text-gray-200"
+                  className="flex space-x-3 md:space-x-5 my-auto 
+                  justify-center text-lg bg-gray-600 
+                  bg-opacity-40 text-white
+                  rounded-2xl p-2"
                 >
                   <li>
-                    <a id="landing-link" href="#landing" className="">
+                    <a id="landing-link" href="#landing" 
+                    className="hover:text-red-600">
                       Home
                     </a>
                   </li>
                   <li>
-                    <a id="about-link" href="#about" className="">
+                    <a id="about-link" href="#about" 
+                    className="hover:text-red-600">
                       About
                     </a>
                   </li>
                   <li>
-                    <a id="test-link" href="#test-one" className="">
+                    <a id="test-link" href="#test-one" 
+                    className="hover:text-red-600">
                       Testimonials
                     </a>
                   </li>
                   <li>
-                    <a id="rates-link" href="#rates" className="">
+                    <a id="rates-link" href="#rates" 
+                    className="hover:text-red-600">
                       Services
                     </a>
                   </li>
                   <li>
-                    <a id="contact-link" href="#contact" className="">
+                    <a id="contact-link" href="#contact" 
+                    className="hover:text-red-600">
                       Contact
                     </a>
                   </li>

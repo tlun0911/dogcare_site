@@ -15,13 +15,15 @@ const Testimonials = () => {
         <img
           src={testimonials}
           alt="testimonials"
+          loading="lazy"
+          id="test1-img"
           data-speed="auto"
           className="absolute top-0 left-0 h-[115%] w-full"
         />
       </div>
       <div id="test1-content-container" className="p-4 place-content-center">
         <h2 className="overflow-hidden text-center font-bold text-4xl mb-4">
-          What Our Clients Say -{" "}
+          What Our Clients Say
         </h2>
         <p
           className="overflow-hidden text-wrap leading-relaxed md:leading-loose 

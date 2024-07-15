@@ -15,6 +15,8 @@ const Testimonials3 = () => {
         <img
           src={testimonials3}
           alt="testimonials3"
+          loading="lazy"
+          id="test3-img"
           data-speed="auto"
           className="absolute top-0 left-0 h-[140%] w-full"
         />

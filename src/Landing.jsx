@@ -50,7 +50,8 @@ const Landing = () => {
         ease: "bounce.out",
         stagger: 0.05,
       }).set(split3.chars, {
-        textDecoration: "underline",
+        color: "#DC2626",
+        fontWeight: "bold",
         duration: 0.5,
         stagger: 0.05,
       }, "-=0.5");

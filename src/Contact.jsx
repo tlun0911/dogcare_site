@@ -54,6 +54,8 @@ const Contact = () => {
         <img
           alt="contact"
           data-speed="auto"
+          id="contact-img"
+          loading="lazy"
           src={contact_img}
           className="absolute top-0 left-0 h-[115%] w-full"
         />

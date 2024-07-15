@@ -1,7 +1,6 @@
 import about_us from "./assets/about_us.png";
 
 const AboutUs = () => {
-
   return (
     <div
       id="about-us-container"
@@ -11,7 +10,7 @@ const AboutUs = () => {
       <div id="p1-container" className="p-4 place-content-center ">
         <h1
           id="about-us-heading"
-          className="overflow-hidden font-bold text-center text-4xl mb-4"
+          className="overflow-hidden font-bold text-center text-4xl mt-3 mb-4"
         >
           About Us
         </h1>
@@ -38,6 +37,7 @@ const AboutUs = () => {
           src={about_us}
           data-speed="auto"
           alt="about us"
+          loading="lazy"
           id="about-us-img"
           className="absolute top-0 left-0 h-auto w-full"
         />

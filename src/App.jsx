@@ -16,7 +16,6 @@ import Testimonials2 from "./Testimonials2";
 import Testimonials3 from "./Testimonials3";
 
 function App() {
-
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
     gsap.registerPlugin(SplitText);
@@ -25,7 +24,6 @@ function App() {
     const smoother = ScrollSmoother.create({
       content: "#smooth-content",
       wrapper: "#smooth-wrapper",
-      normalizeScroll: true,
       effects: true,
       smooth: 1,
     });
@@ -81,13 +79,35 @@ function App() {
       });
     });
 
-    ScrollTrigger.create({
-      trigger: "#navbar",
-      start: "top top",
-      endTrigger: "#footer",
-      end: "bottom top",
-      pin: true,
-      pinSpacing: false,
+    let mm = gsap.matchMedia();
+
+    // Desktop navbar pinning
+    mm.add("(min-width: 800px)", () => {
+      ScrollTrigger.create({
+        trigger: "#navbar",
+        start: "top top",
+        endTrigger: "#footer",
+        end: "bottom top",
+        pin: true,
+        anticipatePin: 1,
+        normalizeScroll: true,
+        pinSpacing: false,
+      });
+    });
+
+    // Mobile navbar pinning
+    mm.add("(max-width: 799px)", () => {
+      ScrollTrigger.create({
+        trigger: "#navbar",
+        start: "top top",
+        endTrigger: "#footer",
+        end: "bottom top",
+        pin: true,
+        anticipatePin: 1,
+        pinType: "fixed",
+        normalizeScroll: true,
+        pinSpacing: false,
+      });
     });
 
     // smoother.effects("img", { speed: "auto" });

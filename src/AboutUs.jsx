@@ -4,7 +4,7 @@ const AboutUs = () => {
   return (
     <div
       id="about-us-container"
-      className="bg-blue-300 min-h-screen grid grid-rows-2
+      className="bg-blue-300 md:h-screen grid grid-rows-2
       md:grid-cols-2 md:grid-rows-1 "
     >
       <div id="p1-container" className="p-4 place-content-center ">
@@ -20,8 +20,8 @@ const AboutUs = () => {
         text-justify text-xl md:text-2xl"
         >
           Welcome to{" "}
-          <span className="inline-block font-bold">Foster Family Dog Care</span>
-          , where our passion is dogs! We are Eric and Alicia Foster. With the
+          <span className="inline-block font-bold">Foster Family Dog Care</span>, 
+          where our passion is dogs! We are Eric and Alicia Foster. With the
           help of our little daughter Lucy and our rescue dog Moose, we make up
           this small family business that is Foster Family Dog Care. We are a
           full-service dog and house sitting business. Our services are offered
@@ -31,15 +31,14 @@ const AboutUs = () => {
       </div>
       <div
         id="about-us-img-container"
-        className="relative h-full w-full overflow-hidden "
+        className="relative h-full w-full "
       >
         <img
           src={about_us}
-          data-speed="auto"
           alt="about us"
           loading="lazy"
           id="about-us-img"
-          className="absolute top-0 left-0 h-auto w-full"
+          className="w-full h-auto"
         />
       </div>
     </div>

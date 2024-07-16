@@ -31,11 +31,10 @@ const AboutUs = () => {
       >
         <img
           src={about_us_3}
-          data-speed="auto"
           alt="about us 3"
           loading="lazy"
           id="about-us-img3"
-          className="absolute top-0 left-0 h-[115%] w-full"
+          className=" w-full"
         />
       </div>
     </div>

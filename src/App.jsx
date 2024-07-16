@@ -3,7 +3,6 @@ import { useGSAP } from "@gsap/react";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import Landing from "./Landing";
 import AboutUs from "./AboutUs";
 import AboutUs2 from "./AboutUs2";
@@ -14,12 +13,13 @@ import Contact from "./Contact";
 import Footer from "./Footer";
 import Testimonials2 from "./Testimonials2";
 import Testimonials3 from "./Testimonials3";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
     gsap.registerPlugin(SplitText);
-    gsap.registerPlugin(ScrollToPlugin);
 
     const smoother = ScrollSmoother.create({
       content: "#smooth-content",
@@ -27,34 +27,6 @@ function App() {
       effects: true,
       smooth: 1,
     });
-
-    let links = gsap.utils.toArray("nav a");
-    links.forEach((a) => {
-      let element = document.querySelector(a.getAttribute("href")),
-        linkST = ScrollTrigger.create({
-          trigger: element,
-          start: "top top",
-        }),
-        highlightST = ScrollTrigger.create({
-          trigger: element,
-          start: "top center",
-          end: "bottom center",
-          onToggle: (self) => self.isActive && setActive(a),
-        });
-      a.addEventListener("click", function (e) {
-        e.preventDefault();
-        gsap.to(window, {
-          duration: 1,
-          scrollTo: linkST.start,
-          overwrite: "auto",
-        });
-      });
-    });
-
-    function setActive(link) {
-      links.forEach((el) => el.classList.remove("active"));
-      link.classList.add("active");
-    }
 
     // Target all <p> tags
     document.querySelectorAll("p").forEach((p) => {
@@ -78,100 +50,16 @@ function App() {
         });
       });
     });
-
-    let mm = gsap.matchMedia();
-
-    // Desktop navbar pinning
-    mm.add("(min-width: 800px)", () => {
-      ScrollTrigger.create({
-        trigger: "#navbar",
-        start: "top top",
-        endTrigger: "#footer",
-        end: "bottom top",
-        pin: true,
-        anticipatePin: 1,
-        normalizeScroll: true,
-        pinSpacing: false,
-      });
-    });
-
-    // Mobile navbar pinning
-    mm.add("(max-width: 799px)", () => {
-      ScrollTrigger.create({
-        trigger: "#navbar",
-        start: "top top",
-        endTrigger: "#footer",
-        end: "bottom top",
-        pin: true,
-        anticipatePin: 1,
-        pinType: "fixed",
-        normalizeScroll: true,
-        pinSpacing: false,
-      });
-    });
-
-    // smoother.effects("img", { speed: "auto" });
   }, []);
 
   return (
     <div id="smooth-wrapper">
       <div id="smooth-content">
         <div className="relative overflow-x-hidden">
-          <section
-            id="landing"
-            className="panel relative max-h-screen w-screen"
-          >
+          <header id="landing" className="relative max-h-screen w-screen">
             <Landing />
-            <section
-              id="navbar"
-              className="relative max-h-8 top-0 z-50 max-w-screen"
-            >
-              <nav
-                id="navbar-container"
-                className="flex justify-center w-full max-h-8"
-              >
-                <ul
-                  id="navbar-list"
-                  className="flex space-x-3 md:space-x-5 my-auto 
-                  justify-center text-lg bg-gray-600 
-                  bg-opacity-40 text-white
-                  rounded-2xl p-2"
-                >
-                  <li>
-                    <a id="landing-link" href="#landing" 
-                    className="hover:text-red-600">
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a id="about-link" href="#about" 
-                    className="hover:text-red-600">
-                      About
-                    </a>
-                  </li>
-                  <li>
-                    <a id="test-link" href="#test-one" 
-                    className="hover:text-red-600">
-                      Testimonials
-                    </a>
-                  </li>
-                  <li>
-                    <a id="rates-link" href="#rates" 
-                    className="hover:text-red-600">
-                      Services
-                    </a>
-                  </li>
-                  <li>
-                    <a id="contact-link" href="#contact" 
-                    className="hover:text-red-600">
-                      Contact
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </section>
-          </section>
-          <section id="about" className="panel relative min-h-screen">
+          </header>
+          <section id="about" className="relative min-h-screen">
             <AboutUs />
           </section>
           <section id="about2" className="relative min-h-screen">
@@ -199,6 +87,7 @@ function App() {
             <Footer />
           </footer>
         </div>
+        <ToastContainer />
       </div>
     </div>
   );

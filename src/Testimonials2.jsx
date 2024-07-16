@@ -17,8 +17,7 @@ const Testimonials2 = () => {
           alt="testimonials2"
           loading="lazy"
           id="test2-img"
-          data-speed="auto"
-          className="absolute top-0 left-0 h-[140%] w-full"
+          className="object-cover h-full"
         />
       </div>
       <div id="test2-content-container" className="p-4 place-content-center">

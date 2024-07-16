@@ -26,7 +26,7 @@ const Footer = () => {
         64H64c-35.3 0-64-28.7-64-64V128z"
           />
         </svg>
-        <h2 className="">Aliciafoster0929@gmail.com</h2>
+        <h2 className="">eric.foster33@gmail.com</h2>
       </div>
       <div className="inline-flex items-center space-x-4">
         <svg

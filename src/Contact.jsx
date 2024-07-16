@@ -53,11 +53,10 @@ const Contact = () => {
       >
         <img
           alt="contact"
-          data-speed="auto"
           id="contact-img"
           loading="lazy"
           src={contact_img}
-          className="absolute top-0 left-0 h-[115%] w-full"
+          className="object-cover w-full"
         />
       </div>
       <div id="contact-content-container" className="p-4 place-content-center">

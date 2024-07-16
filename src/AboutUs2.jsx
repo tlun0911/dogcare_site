@@ -9,14 +9,13 @@ const AboutUs2 = () => {
     >
       <div
         id="about-us-img2-container"
-        className="relative h-full overflow-hidden order-last md:order-first "
+        className="relative h-full order-last md:order-first "
       >
         <img
           id="about-us-img2"
           src={about_us_2}
           alt="About Us 2"
-          data-speed="auto"
-          className="absolute top-0 left-0 h-[115%] w-full"
+          className="object-cover w-full"
         />
       </div>
       <div id="p2-container" className="px-4 place-content-center my-4 md:my-8 ">

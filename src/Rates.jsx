@@ -25,8 +25,7 @@ const Rates = () => {
           alt="rates"
           loading="lazy"
           id="rates-img"
-          data-speed="auto"
-          className="absolute top-0 left-0 h-auto w-full"
+          className="h-auto w-full"
         />
       </div>
     </div>

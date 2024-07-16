@@ -10,7 +10,7 @@ const AboutUs = () => {
       <div id="p1-container" className="p-4 place-content-center ">
         <h1
           id="about-us-heading"
-          className="overflow-hidden font-bold text-center text-4xl mt-3 mb-4"
+          className="overflow-hidden font-bold text-center text-4xl mb-4"
         >
           About Us
         </h1>

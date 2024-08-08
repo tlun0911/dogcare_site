@@ -59,36 +59,37 @@ function App() {
           <header id="landing" className="relative max-h-screen w-screen">
             <Landing />
           </header>
-          <section id="about" className="relative min-h-screen">
+          <section id="about" className="relative max-h-fit">
             <AboutUs />
           </section>
-          <section id="about2" className="relative min-h-screen">
+          <section id="about2" className="relative max-h-fit">
             <AboutUs2 />
           </section>
-          <section id="about3" className="relative min-h-screen">
+          <section id="about3" className="relative max-h-fit">
             <AboutUs3 />
           </section>
-          <section id="test-one" className="panel min-h-screen">
-            <Testimonials />
-          </section>
-          <section id="test-two" className="min-h-screen">
-            <Testimonials2 />
-          </section>
-          <section id="test-three" className="min-h-screen">
-            <Testimonials3 />
-          </section>
-          <section id="rates" className="panel min-h-screen">
+          <section id="rates" className="panel max-h-fit">
             <Rates />
           </section>
-          <section id="contact" className="panel min-h-screen">
+          <section id="test-one" className="panel max-h-fit">
+            <Testimonials />
+          </section>
+          <section id="test-two" className="max-h-fit">
+            <Testimonials2 />
+          </section>
+          <section id="test-three" className="max-h-fit">
+            <Testimonials3 />
+          </section>
+
+          <section id="contact" className="panel max-h-fit">
             <Contact />
           </section>
           <footer id="footer" className="">
             <Footer />
           </footer>
         </div>
-        <ToastContainer />
       </div>
+        <ToastContainer />
     </div>
   );
 }

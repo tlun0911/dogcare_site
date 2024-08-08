@@ -1,4 +1,4 @@
-import testimonials from "./assets/testimonials.png";
+import testimonials from "./assets/testimonials.webp";
 
 const Testimonials = () => {
 
@@ -10,7 +10,7 @@ const Testimonials = () => {
     >
       <div
         id="test1-image-container"
-        className="relative h-full w-full overflow-hidden order-last md:order-first"
+        className="relative h-full w-full overflow-hidden order-last "
       >
         <img
           src={testimonials}
@@ -20,7 +20,7 @@ const Testimonials = () => {
           className="object-cover h-full"
         />
       </div>
-      <div id="test1-content-container" className="p-4 place-content-center">
+      <div id="test1-content-container" className="p-4 place-content-center ">
         <h2 className="overflow-hidden text-center font-bold text-4xl mb-4">
           What Our Clients Say
         </h2>

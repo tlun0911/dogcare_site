@@ -1,4 +1,4 @@
-import testimonials3 from "./assets/testimonials3.png";
+import testimonials3 from "./assets/testimonials3.webp";
 
 const Testimonials3 = () => {
 
@@ -10,7 +10,7 @@ const Testimonials3 = () => {
     >
       <div
         id="test3-image-container"
-        className="relative h-full w-full overflow-hidden order-last md:order-first"
+        className="relative h-full w-full overflow-hidden order-last "
       >
         <img
           src={testimonials3}

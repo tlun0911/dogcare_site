@@ -1,4 +1,4 @@
-import rates from "./assets/rates.png";
+import rates from "./assets/rates.webp";
 
 const Rates = () => {
 
@@ -7,7 +7,7 @@ const Rates = () => {
       md:grid-cols-2 md:grid-rows-1 bg-cyan-400">
       <div
         id="rates-content-container"
-        className="p-4 place-content-center"
+        className="p-4 place-content-center "
       >
         <h2 className="overflow-hidden font-bold text-center text-4xl mb-12">Our Services:</h2>
         <p className="overflow-hidden text-wrap leading-relaxed md:leading-loose 
@@ -19,7 +19,7 @@ const Rates = () => {
           <br/>
         </p>
       </div>
-      <div id="rates-image-container" className="relative h-full w-full overflow-hidden">
+      <div id="rates-image-container" className="relative h-full w-full overflow-hidden order-last md:order-first">
         <img
           src={rates}
           alt="rates"

@@ -1,5 +1,7 @@
 import { useState } from "react";
-import contact_img from "./assets/contact_img.jpg";
+import contact_img from "./assets/contact_img.webp";
+import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const [formDetails, setFormDetails] = useState({
@@ -20,7 +22,7 @@ const Contact = () => {
         "contact_service",
         "contact_form",
         e.target,
-        "" // YOUR USER ID HERE
+        "Kvkqjxm55yoiCVCzb" // YOUR USER ID HERE
       )
       .then(
         (result) => {

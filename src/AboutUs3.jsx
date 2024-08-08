@@ -1,14 +1,16 @@
-import about_us_3 from "./assets/about_us_3.png";
+import about_us_3 from "./assets/about_us_3.webp";
 
 const AboutUs = () => {
-
   return (
     <div
       id="about-us-container3"
       className="bg-green-300 min-h-screen grid grid-rows-2
       md:grid-cols-2 md:grid-rows-1 "
     >
-      <div id="p3-container" className="p-4 place-content-center ">
+      <div
+        id="p3-container"
+        className="p-4 place-content-center "
+      >
         <p
           id="p3-content"
           className="overflow-hidden text-wrap leading-relaxed md:leading-loose 

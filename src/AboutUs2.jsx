@@ -1,4 +1,4 @@
-import about_us_2 from "./assets/landing_page.png";
+import about_us_2 from "./assets/landing_page.webp";
 
 const AboutUs2 = () => {
   return (

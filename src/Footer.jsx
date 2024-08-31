@@ -43,7 +43,7 @@ const Footer = () => {
         11.6-46.3l-40-96z"
           />
         </svg>
-        <h2 className="">(585) 313-4278</h2>
+        <h2 className="">(585) 415-1971</h2>
       </div>
       <div>
         <SocialIcon
